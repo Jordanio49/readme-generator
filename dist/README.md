@@ -1,9 +1,9 @@
 
-  # README Generator
+  # Readme generator
   
   ## Description
   ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg) <br />
-  This project can be used to quickly generate a professional readme file.
+  This project was created to dynamically generate a readme file for projects.
   
   ## Table of Contents
   1. [Installation Instructions](#installation-instructions)
@@ -14,16 +14,16 @@
   6. [Questions](#questions)
   
   ## Installation Instructions
-  Download the code and install inquirer by typing "npm install inquirer".
+  download the code, open in vs code, run npm install
 
   ## Usage Information
-  This can be used to generate a readme file.
+  use this for generating a professional readme.
 
   ## Contribution Guidelines
-  Feel free to download and adjust the code as you would like, but for me this is a complete project that will not need contributions.
+  no contributions are necessary, but feel free to use the code and make whatever changes you need.
 
   ## Test Instructions
-  Run "node index" in your terminal, answer the prompts, and the file will be generated.
+  to test this run node index in the terminal of vs code, then answer the prompts, then find your new readme file in the dist folder.
 
   ## License
   The License used for this project was MIT <br />
@@ -32,7 +32,7 @@
   ## Questions
   Please reach out with any further questions.
 
-  https://github.com/Jordanio49
+  https://github.com/jordanio49
 
   email: jthomas135@hotmail.com
   

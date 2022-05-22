@@ -1,14 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs')
 const generateMarkdown = require('./utils/generateMarkdown')
 
 
 // TODO: Create an array of questions for user input
 const questions = () => {
-    // if(!data){
-    //     data = {}
-    // }
     return inquirer.prompt([
         {
             type: 'input',
@@ -36,7 +32,6 @@ const questions = () => {
                 }
             }
         },
-        // table of contents will be within the readme.md already
         {
             type: 'input',
             name: 'installation',
@@ -91,9 +86,17 @@ const questions = () => {
         },
         {
             type: 'list',
-            name: 'licenses',
+            name: 'license',
             message: 'Which license would you like to use for your project?',
-            choices: ['MIT', 'more licenses', 'even more', 'and another']
+            choices: ['Mozilla', 'MIT', 'IBM', 'Apache'],
+            validate: licenseInput => {
+                if (licenseInput) {
+                    return true;
+                } else {
+                    console.log('Please enter testing instructions for your project!');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
@@ -122,29 +125,20 @@ const questions = () => {
             }
         }
     ])
-    // .then(data => {
-    //     return questions(data);
-    // });
+        .then(answers => {
+            writeToFile('README.md', answers)
+        });
 };
-
-questions()
-.then(answers => {
-    console.log(answers);
-    console.log(answers.title)
-    console.log(answers.github)
-    console.log(answers.email)
-    });
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    // fs.writeFile(fileName, data, err => {
-    //     // conditional if error, else
-    // })
+    generateMarkdown(fileName, data)
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions();
+}
 
 // Function call to initialize app
 init();
