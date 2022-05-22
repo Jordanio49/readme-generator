@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+// using inquirer for the prompts abd the generate markdown is where the markdown language for the readme will go
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
 
@@ -7,6 +8,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 const questions = () => {
     return inquirer.prompt([
         {
+            // each prompt is checking for user input. if they accidentally forget to enter information on any prompt it will let them know and send them back to that question
             type: 'input',
             name: 'title',
             message: "What is your Project's title?",
