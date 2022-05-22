@@ -3,7 +3,7 @@
   
   ## Description
   ![MIT](https://img.shields.io/badge/License-MIT-yellow.svg) <br />
-  Project can be used to generate a professional readme file.
+  The user finished all of the difficult coding for their project and now they are pretty beat. Last minute they remember they had to write a readme file for the         project as well, but they dont have the energy to even begin. Thats where this project comes in. After running the index file and responding to the given prompts, the user should be left with a dynamically created readme file with info pertaining to their project.
   
   ## Table of Contents
   1. [Installation Instructions](#installation-instructions)
